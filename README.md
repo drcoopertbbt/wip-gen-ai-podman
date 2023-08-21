@@ -12,3 +12,7 @@ git clone https://github.com/drcoopertbbt/Intro-GenAI-Podman.git
 ```bash
 chmod +x init.sh
 ```
+
+```bash
+./init.sh
+```
