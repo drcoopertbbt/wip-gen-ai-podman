@@ -27,11 +27,6 @@ podman build chroma-container -t localhost/chroma/build
 
 # Run ChromaDB server
 
-```bash
-podman run -d --rm --name chromadb -p 8000:8000 -v chromadb-chroma:/chroma -v chromadb-index_data:/index_data localhost/chroma/build
-```
-
-or
 
 ```bash
 podman run -d --rm \
@@ -42,12 +37,13 @@ podman run -d --rm \
 localhost/chroma/build
 ```
 
+podman run --entrypoint
+
 # Run Flowise server
 
 ```bash
-podman run -d --rm --name flowise -p 3000:3000 flowiseai/flowise flowise start
-
-echo "Flowise server available at http://localhost:3000"
-echo "ChromaDB server available at http://localhost:8000"
-
+podman run -d --rm \
+--name flowise \
+-p 3000:3000 \
+flowiseai/flowise flowise start
 ```
