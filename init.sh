@@ -5,6 +5,7 @@ python -m venv venv-chroma
 source venv-chroma/bin/activate
 pip install chromadb langchain beautifulsoup4 lxml openai
 
+
 # Build ChromaDB container
 podman build chroma-container -t localhost/chroma/build
 
