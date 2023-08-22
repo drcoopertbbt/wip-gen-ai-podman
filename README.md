@@ -5,8 +5,17 @@ Many of my fellow Red Hatters have asked for a way to get started with Gen AI an
 The first app is a Chroma Database runnign as an http server that can processes API requests. This fixes a lot of the issues I was having with only using a local folder /my-chroma-db issues. When processing many requests I noticed a lot issues, especially when ingesting data and trying to use the chatbot using a different sessions. Yeah, I tried that. 
 
 
+    - I'm using Fedora 38 on a VM
+
 ```bash
 git clone https://github.com/drcoopertbbt/Intro-GenAI-Podman.git
+cd Intro-GenAI-Podman
+```
+
+```bash
+sudo dnf install python3-devel
+sudo dnf install gcc-c++ -y
+
 ```
 
 # Create Python Virtual Environment with chromadb
@@ -15,10 +24,13 @@ git clone https://github.com/drcoopertbbt/Intro-GenAI-Podman.git
 python -m venv venv-chroma
 source venv-chroma/bin/activate
 pip install chromadb langchain beautifulsoup4 lxml openai
+pip install --upgrade pip
 ```
 
 
 # Build ChromaDB container
+
+This build command uses Docker  chroma-container
 
 ```bash
 podman build chroma-container -t localhost/chroma/build
