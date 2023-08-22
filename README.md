@@ -53,6 +53,8 @@ podman run --entrypoint
 
 # Run Flowise server
 
+I selected dockerhub.
+
 ```bash
 podman run -d --rm \
 --name flowise \
