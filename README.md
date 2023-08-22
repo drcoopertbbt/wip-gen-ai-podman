@@ -30,7 +30,7 @@ pip install --upgrade pip
 
 # Build ChromaDB container
 
-This build command uses Docker  chroma-container
+This build command uses the Dockerfile in /chroma-container and sets that as the build context.
 
 ```bash
 podman build chroma-container -t localhost/chroma/build
