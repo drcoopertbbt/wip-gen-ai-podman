@@ -49,8 +49,6 @@ podman run -d --rm \
 localhost/chroma/build
 ```
 
-podman run --entrypoint
-
 # Run Flowise server
 
 I selected dockerhub.
